@@ -1,0 +1,10 @@
+# Ignore everything in the data folder
+data/dataset
+data/models
+
+
+# for node modules
+node/node_modules
+
+# pycache
+python/__pycache__
