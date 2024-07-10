@@ -14,8 +14,11 @@ function createRow(container, studentName, samples) {
       const sampleContainer = document.createElement("div");
       sampleContainer.id = "sample_" + id;
       sampleContainer.onclick = (evt) => {
-         console.log(evt);
-         handleClick(sample, false)
+         if(evt.ctrlKey){
+            toggleFlaggedSample(sample);
+         }else{
+            handleClick(sample, false)
+         }
       };
       sampleContainer.classList.add("sampleContainer");
       if (correct) {
@@ -71,5 +74,14 @@ function toggleInput() {
    } else {
       inputContainer.style.display = "none";
       chart.hideDynamicPoint();
+   }
+}
+
+function toggleOutput() {
+   if (confusionContainer.style.display == "none") {
+      confusionContainer.style.display = "block";
+      sketchPad.triggerUpdate();
+   } else {
+      confusionContainer.style.display = "none";
    }
 }
