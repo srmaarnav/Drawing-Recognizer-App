@@ -78,10 +78,13 @@ function toggleInput() {
 }
 
 function toggleOutput() {
-   if (confusionContainer.style.display == "none") {
-      confusionContainer.style.display = "block";
-      sketchPad.triggerUpdate();
-   } else {
+   if (networkCanvas.style.display == "") {
+      networkCanvas.style.display = "none";
+      confusionContainer.style.display = "";
+   } else if (confusionContainer.style.display == "") {
       confusionContainer.style.display = "none";
+   } else {
+      confusionContainer.style.display = "";
+      networkCanvas.style.display = "";
    }
 }
