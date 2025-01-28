@@ -25,6 +25,10 @@ This is a simple drawing recognizer application utilizing a neural network to cl
 4. Run the javascript scripts for dataset generation and feature extraction.
     ``` 
     cd node
+    npm install
+    ```
+    The `npm install` runs the following two commands as well.
+    ```
     node dataset_generator.js
     node feature_extractor.js 
     ```
