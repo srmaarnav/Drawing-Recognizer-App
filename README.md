@@ -34,6 +34,7 @@ This is a simple drawing recognizer application utilizing a neural network to cl
     ```
 5. Then, navigate to the Python folder and run the script to generate a neural network.
     ```
+    pip install -r requirements.txt
     cd ../python
     python mlp.py
     ```
